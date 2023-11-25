@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "comlurb-uber",
+  "private_key_id": "9b390105a8aa47911c82922be22a908ebbed0041",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQD4SiDALWoBEucm\n0CPGHeLxU+mHMNF5xS5GX8NL116OO1xWaYqHD5tK+PIZ45RSmaRjOhV7ZhsF5/Ps\nmi7461B+UVcWqvPBb2nJw5ZketsBdWu9ezakt/BrKD2rUzADWT6KYfe+EMmCUt6o\n1qb2OSBKA9zLcoz1awI8nandUx7ugZ4a8ZOd2eU6jmqpe6xWLFZS+PJS2OxQ7Yzj\n8TXuexQiMrVC5x18QhrSqwQvwZr2UDRLP8L/e3i5KU6EoXqRkBRvIOjdHXZHkH5B\n643ISfdL6H1O4SVUTEjt+EmcjPntGmnX4hT0tq6tJCr24770imcKwmg0J9nu+4+Y\nGm9vanWbAgMBAAECggEAZ/SlfMEm+ncfJ/2KlOcrf05aXvueISVhSB7NRqJQWS3a\nbeW3le//XacYuqUyE1l33gHSP73S/6iL1RsDIr5nj9PfqkJ+V5WdzdfhzoUv0A8J\nQqbljJblBwCsvWBRoH1LtaXqE/60WCf5SOjCtCHb9pFibx4xjYm1wIpktiGYuFPi\nrjuKGaoAs4hKF5YRWKyc4JHnoaDH+/bwCUDCMhMfBt0c7hj4RvMI3q04qUt1QDaL\nYxadsRNHSuaUNJkYx4sQbHY21mk/I1rexHjVuC/w8Kr3bTJVma63yJX+Lytw/Ysl\nAekFuuzSIUBjU7V1g3uwOTaFEjS0a6FVx6RUTLLOzQKBgQD+JlA/kKwh/7VN8eTb\nrx6i4OX8hVHBawjU4kaj0Ykg81B55qwNJAXJ59nIVA24ikFM9xn4BERIPlffPDgR\nOJCKfECadC1Ew2ET/AfJNP3zcKW7W8HVw/3aBdGN7B0a7mYGCQFyoZw7A+qXbA9O\nqkgEQ/fhudxi2NTLAQlo7YupnQKBgQD6GORxRkxiOF8E3MtMp6anpYdn6I1S9jYv\nWpWIb2W1+yK9H7qlw45SB7lqtOxKeBOgzg2TRImNbdZO9XDPoH4U19jVy6Pgb7YX\ndv2Tk3afSqJJjw4ZfALxZbh/HqyweRNGuPdyxtdmOvoG5IzSinH4OVG31q7zSxJA\nwOZEsY/ylwKBgQC4tAWMPMssplcQf6UQl1OPkhzzCb0h8XToqk4mTmj3fn1VKnSN\n1Ek0tIBNG/Eg1bGhis/ftNIfItff0Db7JP2+95BH7/jaSZgq2vaZnx6UpqB76rKT\nda3unl3uY9O/N9UDu9XGhncxWKZMR+dUB2LxXqgu71GgsO7tXiKFlGX07QKBgQDK\nZ0DiR8FjsDl+Ju7FX90pSnaWaoeNf8OEeWwRWg5XxCJuKvKUWvqgeq3dpQSilCFW\nf8xOxiYIdr79cffVoQ7I8ZMEG+XJqr8UqHE6cRqMegtzOrpvd4SuNuOkxX9+5s3p\n66IfmrsSemKFF4y8i90GxeTTwoQeVEA2dacmKwnTiwKBgQCQUT5GSpvEBKoYhJvk\nTtBgT1huxnGKPiIXwmlYhIew12+i0+XvcBvlTaxepMx/+uYM5ruCoYAyDxi37Rqk\ngmyC5fdWyfGNK63SLhHZtJGPTHTkWeLzmL164P7+7zidxkMPYS5F9ofy44mSs0jh\n6cOvHpyFsoxLxlfoKlY3UxXLgg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-g75s7@comlurb-uber.iam.gserviceaccount.com",
+  "client_id": "109050419582789863753",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-g75s7%40comlurb-uber.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

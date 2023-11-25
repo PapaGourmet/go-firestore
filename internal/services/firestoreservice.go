@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	"cloud.google.com/go/firestore"
-	connection "github.com/PapaGourmet/estudosGO/firestore"
-	irepositorys "github.com/PapaGourmet/estudosGO/irepositorys"
+	"github.com/PapaGourmet/estudosGO/firestore"
+	"github.com/PapaGourmet/estudosGO/irepositorys"
 	"google.golang.org/api/iterator"
 )
 
@@ -20,22 +20,8 @@ func (e PersonError) Error() string {
 
 type FisrestoreService struct{}
 
-func multipleDocs(ctx context.Context, client *firestore.Client) (irepositorys.Subscriber, error) {
-
-	init := irepositorys.Subscriber{
-		Last_update: 0,
-		Name:        "",
-		Phone:       "",
-		PortNumber:  "",
-		Session_id:  "",
-		Status:      false,
-		Cep: irepositorys.PostalCode{
-			District:   "",
-			PostalCode: "",
-			City:       "",
-			Street:     "",
-			State:      ""}}
-
+func multipleDocs(ctx context.Context, client *firestore.Client) (*irepositorys.Subscriber, error) {
+	
 	iter := client.Collection("subscribers").Documents(ctx)
 	for {
 		doc, err := iter.Next()
@@ -44,8 +30,15 @@ func multipleDocs(ctx context.Context, client *firestore.Client) (irepositorys.S
 		}
 		if err != nil {
 			println(err.Error())
-			return init, err
+			return nil, err
 		}
+
+		Last_update := doc.Data()["last_update"].(int64)
+		Name := doc.Data()["name"].(string)
+		Phone := doc.Data()["phone"].(string)
+		PortNumber := doc.Data()["portnumber"].(string)
+		Session_id := doc.Data()["session_id"].(string)
+		Status := doc.Data()["status"].(bool)
 
 		cepMap, found := doc.Data()["cep"].(map[string]interface{})
 		if found {
@@ -62,15 +55,7 @@ func multipleDocs(ctx context.Context, client *firestore.Client) (irepositorys.S
 				PostalCode: Postalcode,
 				State:      State,
 				Street:     Street,
-			}
-
-
-			Last_update := doc.Data()["last_update"].(int64)
-			Name := doc.Data()["name"].(string)
-			Phone := doc.Data()["phone"].(string)
-			PortNumber := doc.Data()["portnumber"].(string)
-			Session_id := doc.Data()["session_id"].(string)
-			Status := doc.Data()["status"].(bool)
+			}			
 
 			_subscriber := irepositorys.Subscriber{
 				Last_update: Last_update,
@@ -82,21 +67,31 @@ func multipleDocs(ctx context.Context, client *firestore.Client) (irepositorys.S
 				Cep:         _cep,
 			}
 
-			return _subscriber, nil
+			return &_subscriber, nil
 
 		} else {
-			return init, PersonError{Message: "Erro de chave e valor"}
+
+			_subscriber := irepositorys.Subscriber{
+				Last_update: Last_update,
+				Name:        Name,
+				Phone:       Phone,
+				PortNumber:  PortNumber,
+				Session_id:  Session_id,
+				Status:      Status,
+			}
+
+			return &_subscriber, nil
 		}
 	}
 
-	return init, nil
+	return nil, nil
 }
 
-func (f FisrestoreService) GetAll() (irepositorys.Subscriber, error) {
+func (f FisrestoreService) GetAll() (*irepositorys.Subscriber, error) {
 	client, ctx, error := connection.Conn()
 
 	if error != nil {
-		println(error.Error())
+		return nil, error
 	}
 
 	_subscriber, error := multipleDocs(ctx, client)

@@ -3,10 +3,8 @@ package main
 import (
 	"fmt"
 
-	irepositorys "github.com/PapaGourmet/estudosGO/irepositorys"
-	services "github.com/PapaGourmet/estudosGO/services"
+	"github.com/PapaGourmet/estudosGO/internal/irepositorys"
 )
-
 
 
 func main() {
